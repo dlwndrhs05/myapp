@@ -16,28 +16,29 @@ function App() {
   while(userData.length < 10){
     userData.push({
       avatar:faker.image.avatar(),
-      name:`${faker_ko.name.lastName()}${faker_ko.name.firsName()}`,
+      name:`${faker_ko.name.lastName()}${faker_ko.name.firstName()}`,
       email:faker.internet.email(),
       jobTitle: faker.name.jobTitle(),
-      phoneNo: faker_ko.phoneNo.phoneNumber()
+      phoneNo: faker_ko.phone.phoneNumber(),
     })
   }
 
-  const userCards = userData.map((userData) =>{
-    return <Card sx={{ maxWidth: 345 }}>
+  const userCards = userData.map((userData, idx) =>{
+    return <Card sx={{ maxWidth: 345 }} key={idx}>
       <CardMedia
         component="img"
         height="140"
-        image="/static/images/cards/contemplative-reptile.jpg"
-        alt="green iguana"
+        image={userData.avatar}
+        alt="cat"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          {userData.name}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+          {userData.email}
+          {userData.jobTitle}
+          {userData.phoneNo}
         </Typography>
       </CardContent>
       <CardActions>
