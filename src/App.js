@@ -27,17 +27,18 @@ function App() {
     return <Card sx={{ maxWidth: 345 }} key={idx}>
       <CardMedia
         component="img"
+        width="1200"
         height="140"
         image={userData.avatar}
-        alt="cat"
+        alt="human"
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography gutterBottom variant="h5" component="div" >
           {userData.name}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          {userData.email}
           {userData.jobTitle}
+          {userData.email}
           {userData.phoneNo}
         </Typography>
       </CardContent>
