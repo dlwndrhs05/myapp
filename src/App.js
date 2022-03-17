@@ -27,7 +27,6 @@ function App() {
     return <Card sx={{ maxWidth: 345 }} key={idx}>
       <CardMedia
         component="img"
-        width="1200"
         height="140"
         image={userData.avatar}
         alt="human"
