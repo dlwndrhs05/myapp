@@ -38,9 +38,11 @@ function App() {
         </Typography>
         <Typography variant="body2" color="text.secondary">
           {userData.jobTitle}
-          {"\n"}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
           {userData.email}
-          {"\n"}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
           {userData.phoneNo}
         </Typography>
       </CardContent>
