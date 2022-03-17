@@ -8,7 +8,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import './App.css';
-import DogMain from './DogMain';
+
 
 function App() {
   const userData = [];
